@@ -29,6 +29,15 @@
 	<aui:button href="<%= addFooURL %>" value="add-foo" />
 </aui:button-row>
 
+<aui:button-row>
+    <portlet:renderURL var="testingFooURL">
+        <portlet:param name="action" value="testingFoo" />
+        <portlet:param name="redirect" value="<%= currentURL %>" />
+    </portlet:renderURL>
+
+    <aui:button href="<%= testingFooURL %>" value="testing-foo" />
+</aui:button-row>
+
 <liferay-ui:search-container
 	total="<%= FooLocalServiceUtil.getFoosCount() %>"
 >
